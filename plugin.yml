@@ -1,0 +1,17 @@
+name: XMonsters
+main: com.gizmoplex.bukkit.XMonstersPlugin.XMonstersPlugin
+version: 0.1
+commands:
+  monsters:
+    description: Turn monsters on or off.
+    usage: /monsters <on | off> or /monsters
+    permission: XMonstersPlugin.monsters
+    permission-message: You do not have permission to use the monsters command.
+permissions:
+  XMonstersPlugin.*:
+    description: Access to all monsters plugin commands.
+    children:
+      XMonstersPlugin.monsters: true
+  XMonstersPlugin.monsters:
+    description: Permission to use the monsters command.
+    default: op
